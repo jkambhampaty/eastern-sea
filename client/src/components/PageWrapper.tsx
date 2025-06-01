@@ -14,7 +14,7 @@ const PageWrapper = ({
   documentTitle,
   titleClass = "",
 }: Props) => {
-  useTitle(`${documentTitle ?? title} - Eastern Sea`);
+  useTitle(`${documentTitle ?? title}`);
 
   return (
     <div

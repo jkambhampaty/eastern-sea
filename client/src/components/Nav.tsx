@@ -33,9 +33,7 @@ const Nav = () => {
         style={{ display: open ? "flex" : undefined }}
       >
         <Navlink to="/">Home</Navlink>
-        <Navlink to="/now/">Now</Navlink>
-        <Navlink to="/about/">About</Navlink>
-        <Navlink to="/api-test/">API Test</Navlink>
+        <Navlink to="/articles/">Articles</Navlink>
       </ul>
     </nav>
   );

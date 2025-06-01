@@ -2,11 +2,11 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Alert from "src/components/Alert";
 import Footer from "src/components/Footer";
 import Nav from "src/components/Nav";
-import About from "src/pages/About";
-import ApiTest from "src/pages/ApiTest";
 import Home from "src/pages/Home";
-import Now from "src/pages/Now";
 import NotFound from "src/pages/NotFound";
+import Article from "src/pages/Article";
+import ArticleList from "./pages/ArticleList";
+import articles from "src/articles";
 
 const App = () => {
   return (
@@ -14,9 +14,14 @@ const App = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/now/" element={<Now />} />
-        <Route path="/about/" element={<About />} />
-        <Route path="/api-test/" element={<ApiTest />} />
+        <Route path="/articles/" element={<ArticleList />} />
+        {articles.map((article, i) => (
+          <Route
+            key={i}
+            path={`/articles/${article.slug}`}
+            element={<Article article={article} />}
+          />
+        ))}
         {/* Make sure this is the last route */}
         <Route path="*" element={<NotFound />} />
       </Routes>
