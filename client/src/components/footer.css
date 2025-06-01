@@ -1,0 +1,9 @@
+.footer {
+  background-color: #F9F6E5;
+  font-family: Amstelvar, 'Arial Narrow', Arial, sans-serif;
+  font-variation-settings: "wdth" 25;
+  color: #54585A;
+  font-size: 0.8rem;
+  padding: 1rem;
+  text-align: center;
+}

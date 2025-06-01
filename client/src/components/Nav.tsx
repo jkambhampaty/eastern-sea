@@ -22,7 +22,7 @@ const Nav = () => {
     <nav className="flex items-center justify-between w-100 nav pv2 ph4">
       <div className="flex items-center justify-between bar-container">
         <UnstyledLink className="nav-title" to="/">
-          Vercel MERN Skeleton
+          Eastern Sea
         </UnstyledLink>
         <div className="mobile">
           <Hamburger open={open} onClick={() => setOpen(!open)} />
@@ -33,6 +33,7 @@ const Nav = () => {
         style={{ display: open ? "flex" : undefined }}
       >
         <Navlink to="/">Home</Navlink>
+        <Navlink to="/now/">Now</Navlink>
         <Navlink to="/about/">About</Navlink>
         <Navlink to="/api-test/">API Test</Navlink>
       </ul>

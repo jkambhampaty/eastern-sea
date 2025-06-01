@@ -1,20 +1,20 @@
 {
-  "name": "vercel-mern-skeleton",
+  "name": "jaka-blog",
   "private": "true",
-  "description": "A skeleton for a React/Express/MongoDB web app that is deployable to Vercel!",
+  "description": "reflections",
   "main": "api/index.ts",
   "scripts": {
     "start": "node build/api/index.js",
-    "dev:server": "NODE_ENV=development ts-node-dev api/index.ts",
+    "dev:server": "cross-env NODE_ENV=development ts-node-dev api/index.ts",
     "dev:client": "cd client && npm start",
-    "dev": "(npm run dev:server) & (npm run dev:client)",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "build": "tsc && cd client && npm run build",
     "lint": "eslint api server"
   },
   "engines": {
     "node": "20.x"
   },
-  "author": "Adam Janicki",
+  "author": "Jaya Kambhampaty",
   "dependencies": {
     "connect-mongo": "^4.6.0",
     "cors": "^2.8.5",
@@ -23,7 +23,8 @@
     "express-mongo-sanitize": "^2.2.0",
     "express-session": "^1.18.1",
     "mongoose": "^6.13.8",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "react-markdown": "^10.1.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.18",
@@ -31,6 +32,8 @@
     "@types/express-session": "^1.18.1",
     "@types/morgan": "^1.9.9",
     "@typescript-eslint/eslint-plugin": "^8.32.0",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
     "eslint": "^8.57.1",
     "prettier": "^3.5.3",
     "ts-node-dev": "^2.0.0",

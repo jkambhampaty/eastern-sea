@@ -14,7 +14,7 @@ const PageWrapper = ({
   documentTitle,
   titleClass = "",
 }: Props) => {
-  useTitle(`${documentTitle ?? title} - Vercel MERN Skeleton`);
+  useTitle(`${documentTitle ?? title} - Eastern Sea`);
 
   return (
     <div
