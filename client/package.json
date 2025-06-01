@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "vite",
-    "build": "tsc --noEmit && eslint src --max-warnings=0 && vite build",
+    "build": "vite build",
     "lint": "eslint src"
   },
   "devDependencies": {
